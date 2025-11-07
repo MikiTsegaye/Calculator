@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(btnTxt.equals("C")){
             dataToCalc=dataToCalc.substring(0,dataToCalc.length()-1);
         }else{
+            if (btnTxt.equals("x")){ btnTxt = "*";}
             dataToCalc = dataToCalc+btnTxt;
         }
         solutionTv.setText(dataToCalc);
