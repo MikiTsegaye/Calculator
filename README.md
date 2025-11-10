@@ -1,6 +1,4 @@
-
-"# Calculator" 
-=======
-This is a calculator project made from scratch via Android Studio using java.
-
-
+Calculator 
+==========================================================================
+A simple and elegant **calculator app** built in **Java** using **Android Studio**.  
+Originally implemented using a **custom-built Java expression parser** for performing all calculations natively.
