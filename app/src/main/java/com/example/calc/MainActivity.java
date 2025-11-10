@@ -94,15 +94,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     String getResult(String data){
         try {
-            Context context = Context.enter();
-            context.setOptimizationLevel(-1);
-            Scriptable scriptable = context.initStandardObjects();
-            String finalResult = context.evaluateString(scriptable,data,"Javascript",1,null).toString();
-            if( finalResult.endsWith(".0")){
-                finalResult=finalResult.replace(".0","");
+            double result = Calculator.evaluate(data);
+            String finalResult = String.valueOf(result);
+            if (finalResult.endsWith(".0")) {
+                finalResult = finalResult.replace(".0", "");
             }
             return finalResult;
-        }catch(Exception e)
-        {return "Error";}
+        } catch (Exception e) {
+            return "Error";
+        }
     }
 }
