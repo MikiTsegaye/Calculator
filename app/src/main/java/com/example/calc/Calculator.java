@@ -20,6 +20,11 @@ public class Calculator {
             if (Character.isDigit(c) || c == '.') {
                 number.append(c);
             } else {
+                if(c == '-' && (i==0 || expr.charAt(i-1)== '(' || isOperator(expr.charAt(i-1))))
+                {
+                    number.append(c);
+                    continue;
+                }
                 if (number.length() > 0) {
                     output.add(number.toString());
                     number.setLength(0);
